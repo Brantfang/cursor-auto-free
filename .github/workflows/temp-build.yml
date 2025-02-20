@@ -2,6 +2,11 @@ name: temp Build Executables
 
 on:
   workflow_dispatch:  # 手动触发工作流
+    inputs:
+        job_name:
+          description: 'The name of the job to run'
+          required: true
+          default: 'build-windows'
 
 jobs:
   build-windows:
